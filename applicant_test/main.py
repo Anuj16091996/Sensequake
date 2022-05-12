@@ -14,7 +14,7 @@ nameNotContain = CitiesCollection.city_name_not_contain("hello")
 
 # Query for roads that have length greater than 0 and connect two cities
 # exclude the one in A) collection.
-cities_detail = CitiesCollection.power_liner()
+cities_detail = CitiesCollection.road_length()
 # Error validation if database is not working
 # Debug to check query value
 
@@ -28,7 +28,7 @@ number_of_island = RoadsCollection.count_number_of_island()
 # print("the number of islands would be", number_of_island)
 
 # Query for Power lines
-power_lines = RoadsCollection.city_length()
+power_lines = RoadsCollection.power_liner()
 if power_lines is not None:
     minimum_length = check_minimum_length(power_lines)
 # Error validation if database is not working

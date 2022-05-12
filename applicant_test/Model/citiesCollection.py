@@ -36,7 +36,7 @@ class CitiesCollection:
     # should not be in collection and the id of those cities who name is hello should not in
     # endpoints
     @staticmethod
-    def power_liner():
+    def road_length():
         # Checking if port is working
         if connection is not None:
             # Making a connection

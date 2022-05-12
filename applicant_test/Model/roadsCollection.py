@@ -11,7 +11,7 @@ class RoadsCollection:
 
     # return all collection whose road connect two cities
     @staticmethod
-    def city_length():
+    def power_liner():
         if connection is not None:
             roads = connection["roads"]
             query_solution = roads.aggregate([
