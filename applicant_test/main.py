@@ -1,6 +1,7 @@
 # todo: implement the thing
 from Model.roadsCollection import RoadsCollection
 from Model.citiesCollection import CitiesCollection
+from Controller.citiescontroller import check_minimum_length
 
 # Query for cities collection whose name not equal hello
 nameNotContain = CitiesCollection.city_name_not_contain("hello")
@@ -11,8 +12,9 @@ nameNotContain = CitiesCollection.city_name_not_contain("hello")
 #         print(position)
 
 
-# Query for roads that have length greater than 0 and connect cities
-cities_detail = RoadsCollection.city_length()
+# Query for roads that have length greater than 0 and connect two cities
+# exclude the one in A) collection.
+cities_detail = CitiesCollection.power_liner()
 # Error validation if database is not working
 # Debug to check query value
 
@@ -20,7 +22,18 @@ cities_detail = RoadsCollection.city_length()
 #     for position in cities_detail:
 #         print(position)
 
-
+# Query for counting number of islands
 number_of_island = RoadsCollection.count_number_of_island()
-# Number of islands
-print("the number of islands would be", number_of_island)
+# validation in console
+# print("the number of islands would be", number_of_island)
+
+# Query for Power lines
+power_lines = RoadsCollection.city_length()
+if power_lines is not None:
+    minimum_length = check_minimum_length(power_lines)
+# Error validation if database is not working
+# Debug to check query value
+
+# if nameNotContain is not None:
+#     for position in minimum_length:
+#         print(position)
